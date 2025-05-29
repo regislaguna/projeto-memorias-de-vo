@@ -9,6 +9,8 @@ import Suporte from "../pages/Suporte";
 import Quemsomos from "../pages/Quemsomos";
 import Solucoes from "../pages/Solucoes";
 import Contato from "../pages/Contato";
+import Painel from "../pages/Painel";
+import Login from "../pages/Login";
 
 function App() {
  
@@ -21,15 +23,16 @@ function App() {
       <BrowserRouter>
         <div className="Content flex min-h-screen flex-col">
           <Header/>
-          <main ClassName="flex-grow container mx-auto p-4">
+          <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
             <Routes>
                 <Route path="/Home" element={<Home /> } />
                 <Route path="/Quemsomos" element={<Quemsomos /> } />
                 <Route path="/Solucoes" element={<Solucoes />} />
                 <Route path="/Contato" element={<Contato />} />
                 <Route path="/Suporte" element={<Suporte /> } />
+                <Route path="/painel" element={<Painel />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
-
           </main>
           <Footer />
          

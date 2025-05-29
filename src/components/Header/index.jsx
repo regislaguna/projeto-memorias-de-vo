@@ -12,7 +12,7 @@ const Header = () => {
         <header className="flex flex-col w-full h-[100px] bg-transparent absolute top-0 z-10">
             <nav className="h-full flex px-10 mx-auto max-w-[1281px] w-full lg:flex-row flex-col">
                 <div className="Logo-Area flex-1 flex items-center justify-center px-10">
-                    <h1 className="xl:text-3xl mb:text-2xl text-color-primary font-bold uppercase tracking-[6px]"><Link to="/Home">
+                    <h1 className="xl:text-6xl mb:text-2xl text-color-primary font-bold uppercase tracking-[6px]"><Link to="/Home">
                         StackTI
                       </Link>
                     </h1>
