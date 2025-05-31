@@ -14,8 +14,7 @@ function Home () {
       ],[])
     return(
         <div className="mt-[100px]">
-            <h1> Pégina Inicial (Home)</h1>
-            <p>Bem-vindos</p>
+            <h1 className="text-2xl justify-center font-bold "> Bem-vindos</h1>
             <section id="solucoes" className="flex mt-[100px] gap-3 flex-wrap justify-center" >
         {/* <Card 
           image={'/icons/icon_network.svg'} 
