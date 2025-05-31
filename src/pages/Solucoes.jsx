@@ -15,7 +15,7 @@ function Solucoes(){
     ],[])
 
     return(
-        <div className="mt-[110px]">
+        <div className="flex-grow mt-[110px]">
             <h1>Solucoes</h1>
             <p>Esta e pagina solucoes</p>
             <Carousel dados={marcas} />

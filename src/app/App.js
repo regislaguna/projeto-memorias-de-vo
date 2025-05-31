@@ -11,6 +11,7 @@ import Solucoes from "../pages/Solucoes";
 import Contato from "../pages/Contato";
 import Painel from "../pages/Painel";
 import Login from "../pages/Login";
+import PrivateRoute from "../components/Auth";
 
 function App() {
  
@@ -25,12 +26,16 @@ function App() {
           <Header/>
           <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
             <Routes>
-                <Route path="/Home" element={<Home /> } />
-                <Route path="/Quemsomos" element={<Quemsomos /> } />
-                <Route path="/Solucoes" element={<Solucoes />} />
-                <Route path="/Contato" element={<Contato />} />
-                <Route path="/Suporte" element={<Suporte /> } />
-                <Route path="/painel" element={<Painel />} />
+                <Route path="/home" element={<Home /> } />
+                <Route path="/quemsomos" element={<Quemsomos /> } />
+                <Route path="/solucoes" element={<Solucoes />} />
+                <Route path="/contato" element={<Contato />} />
+                <Route path="/suporte" element={<Suporte /> } />
+                <Route path="/painel" element={
+                  <PrivateRoute>
+                  <Painel />
+                  </PrivateRoute>
+                }  />
                 <Route path="/login" element={<Login />} />
             </Routes>
           </main>

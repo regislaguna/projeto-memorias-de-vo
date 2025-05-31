@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return(
-        <footer>
-            <h1> Meu footer</h1>
-            <Link to="/"> Voltar para Home </Link>
+        <footer className="flex justify-center bg-color-primary hover:bg-color-third">
+             <Link to="/" className="text-white"> Voltar para Home </Link>
 
         </footer>
     )
