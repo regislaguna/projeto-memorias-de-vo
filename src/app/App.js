@@ -26,7 +26,7 @@ function App() {
           <Header/>
           <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
             <Routes>
-                <Route path="/home" element={<Home /> } />
+                <Route path="/" element={<Home /> } />
                 <Route path="/quemsomos" element={<Quemsomos /> } />
                 <Route path="/solucoes" element={<Solucoes />} />
                 <Route path="/contato" element={<Contato />} />
