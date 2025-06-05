@@ -19,12 +19,20 @@ module.exports = {
         },
         extend: {
             colors: {
-                "color-primary": "#7A00C0",
-                "color-second": "#50236A",
-                "color-third": "#39005A",
+                "color-primary": "#59342C",
+                "color-second": "#6d4c41",
+                "color-third": "##F27EBE",
                 "dark-gray": "#5A5A5A",
                 "gray-70": "#646E82",
-                "red-error": "#ED3A3A"
+                "red-error": "#ED3A3A",
+
+                // FUNDO
+                "Color-fundo":"#fdeaf2",
+
+                //TEXTO
+                "Color-text": "#59342C", "Color-marrom": "##634234","Color-rosa": "#E1306C",
+                
+                
             }
         }
     },
