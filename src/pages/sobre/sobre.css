@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+.sobre {
+    background-image: url(./assets/img/imagem-para-background.jpg);
+    background-size: cover; /* Para preencher todo o espaço e manter proporções */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9f5f0; /* Caso a imagem de fundo não carregue */
+    padding: 4rem 0;
+    position: relative;
+}
+
+/* Melhorar a legibilidade do texto */
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 245, 240, 0.5); /* Cor de fundo com transparência */
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Para quebrar o texto em multiplas linhas */
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-conteudo {
+    flex: 1; /* Para preencher o texto no espaço do container */
+    min-width: 300px;
+    order: 2; /* Texto vai para a direita para aparecer depois da imagem */
+}
+
+.sobre-imagem {
+    flex: 1; /* Para a imagem preencher por igual o espaço do container */
+    min-width: 300px;
+    margin-right: 2rem;
+    order: 1; /* Imagem vai para a esquerda para aparecer antes do texto */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+
+.sobre h2 {
+    color: #000;
+    font-size: 19px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Barra decorativa sob o título */
+.sobre h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 4px;
+    background-color: #000;
+    margin-top: 0.5rem;
+}
+
+.sobre p {
+    color: #6d4c41;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    display: block; /* Para a imagem ocupar a largura total da div */
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Evento de zoom na imagem */
+.sobre-imagem:hover img {
+    transform: scale(1.03);
+}
+
+/* Formatação da seção de destaques */
+.detaques,h3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    color: #000;
+}
+
+.destaque-item {
+    flex: 1;
+    min-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.destaque-icone {
+    font-size: 1.5rem;
+}
+
+/* Responsividade do site */
+@media (max-width: 768px) {
+    .sobre {
+        padding: 2rem 0;
+        background-attachment: scroll;
+    }
+    .sobre-container {
+        gap: 1.5rem;
+    }
+
+    .sobre-imagem {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .sobre h2 {
+        font-size: 1.5rem;
+    }
+
+    .sobre p {
+        font-size: 1rem;
+    }
+}
