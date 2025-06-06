@@ -1,6 +1,5 @@
 
 import { useMemo } from "react";
-import Card from "../components/Card";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -8,7 +7,7 @@ import Home from "../pages/Home";
 import Suporte from "../pages/Suporte";
 import Quemsomos from "../pages/Quemsomos";
 import Solucoes from "../pages/Solucoes";
-import Contato from "../pages/Contato";
+import Contato from "../pages/Contato/Contato";
 import Painel from "../pages/Painel";
 import Login from "../pages/Login";
 import PrivateRoute from "../components/Auth";
