@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import './contato.css';
 
+//FORMATAÇÂO NUMERO
+import ReactInputMask from 'react-input-mask';
+
+// ICONES E FIGURAS
+import{FaFacebook} from 'react-icons/fa';
+import{ FaInstagram } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaMap } from 'react-icons/fa';
+import { FaRocketchat } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
+
+
+
 function Contato() {
   // Estado para controlar se o campo de upload aparece
   const [mostrarUpload, setMostrarUpload] = useState(false);
@@ -14,6 +28,8 @@ function Contato() {
       setMostrarUpload(false);
     }
   }
+
+  
 
   return (
     <div>
@@ -41,21 +57,21 @@ function Contato() {
                 {/* INFORMAÇÕES DE CONTATO */}
                 <div className="contact-information">
                   <div className="iterative-information">
-                    <i className="fa-solid fa-phone icon-information"></i>{' '}
+                    <FaRocketchat className="fa-solid fa-phone icon-information"/>
                     <a href="tel:+551833334444">(18) 3333-4444</a><br />
-                    <i className="fa-brands fa-whatsapp icon-information"></i>{' '}
+                    <FaWhatsapp className="fa-brands fa-whatsapp icon-information"/>
                     <a href="tel:+5518999998888">(18) 99999-8888</a>
                   </div>
 
                   <div className="iterative-information">
-                    <i className="fa-solid fa-envelope icon-information"></i>
+                    <FaEnvelope className="fa-solid fa-envelope icon-information"/>
                     <address>
                       <a href="mailto:Memoriasdevo@outlook.com">Memoriasdevo@outlook.com</a>
                     </address>
                   </div>
 
                   <div className="iterative-information">
-                    <i className="fa-solid fa-map-location-dot icon-information"></i>
+                    <FaMap className="fa-solid fa-map-location-dot icon-information"/>
                     <address className="location-text">
                       Av. Manoel Goulart Nº 2881, <br /> Vila Santa Helena, <br />Presidente Prudente - SP
                     </address>
@@ -63,7 +79,10 @@ function Contato() {
 
                   {/* REDES SOCIAIS */}
                   <div className="social-media">
-                    <a href="#" className="instagram"><i className="fa-brands fa-instagram icon-rede"></i></a>
+                    <a><FaFacebook/></a>
+                    <a><FaInstagram/></a>
+                    <a><FaSpotify/></a>
+                    
                   </div>
                 </div>
               </div>
