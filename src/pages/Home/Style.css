@@ -1,0 +1,186 @@
+.name-area {
+    height: 428px;
+    justify-content: left;
+    align-items: start;           
+}
+           
+.name-text-area {
+    width: 25%;
+    padding: 24px;
+    gap: 12px;
+    color: #080808;
+    margin-left: 250px;
+    margin-top: 50px;
+    
+}
+
+.name-text-area h1 {
+    font-size: 60px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    color:#634234;
+}
+.name-text-area h4 {
+    font-size: 15px;
+    margin-top: 6px;
+         color:#000000;
+}
+
+.name-text-area p {
+    font-family: Lato;
+    text-align: justify;
+}
+
+.section-produtos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+   
+}
+
+.section-produtos-text h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin-top: 8%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+}
+
+.section-produtos-text p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ver-mais-btn {
+   display: inline-block;
+   background-color: #634234;
+   color: #FFF;
+   padding: 18px 50px;
+   border-radius: 25px;
+   font-size: 14px;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-decoration: none;
+   margin-top: 50px;
+   height: 50px;
+}
+             
+.ver-mais-btn:hover {
+    background-color: #d78f8f;
+}
+
+.section-produtos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+   
+}
+
+.section-produtos-text h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin-top: 8%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+}
+
+.section-produtos-text p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+.section-product-photos {
+    /* Definir largura, usar flexbox para quebra de linha e centralizar itens */
+    /* Adicionar margem para espaçamento */
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+ 
+
+.section-product-photoarea {
+    /* Definir largura e altura, adicionar margem para espaçamento */
+    width: 260px;
+    height: 360px;
+    margin: 10px;
+    cursor: pointer;
+}
+ 
+/* Garantir que as imagens se ajustem à área da foto */
+.section-product-photoarea img {
+    /* Fazer as imagens preencherem o contêiner mantendo a proporção */
+    width: inherit;
+    height: inherit;
+    border-radius: 20px;
+}
+ 
+/* Estilizar a sobreposição de informações da foto para efeito de hover */
+.section-product-photoinfo {
+    /* Posicionar absolutamente, definir tamanho para corresponder à foto e ocultar por padrão */
+    /* Adicionar cor de fundo com transparência */
+    /* Usar flexbox para centralizar o conteúdo verticalmente e horizontalmente */
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+ 
+/* Mostrar a sobreposição de informações ao passar o mouse sobre a área da foto */
+.section-product-photoarea:hover .section-product-photoinfo {
+    /* Exibir a sobreposição ao passar o mouse */
+    opacity: 1;
+    display: flex;
+}
+ 
+/* Estilizar o título na sobreposição de informações da foto */
+.section-product-photoinfo h5 {
+    /* Definir tamanho da fonte, peso e tornar o texto maiúsculo */
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+ 
+/* Estilizar a descrição na sobreposição de informações da foto */
+.section-product-photoinfo p {
+    /* Definir tamanho da fonte e adicionar margem para espaçamento */
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 14px;
+    padding: 10px;
+    font-family: "SoDo Sans", "ellograph-cf", monospace;;
+
+}
