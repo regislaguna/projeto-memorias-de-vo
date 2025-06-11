@@ -4,7 +4,7 @@ function Home () {
    
     return(
       <>
-      <section className="name-área">
+      <section className="name-area">
       <div className="name-text-area">
         <p> Sabor inesquecível</p>
         <h1>Memórias de Vó</h1>
@@ -64,7 +64,8 @@ function Home () {
         </div>
       </div>
   </section>
-
+  </>
+)
 }
 
 export default Home;
