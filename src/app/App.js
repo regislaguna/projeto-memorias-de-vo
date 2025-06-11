@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Suporte from "../pages/Suporte";
-import Quemsomos from "../pages/Quemsomos";
+import Quemsomos from "../pages/quemsomos";
 import Solucoes from "../pages/Solucoes";
 import Contato from "../pages/Contato/Contato";
 import Painel from "../pages/Painel";
@@ -26,6 +26,7 @@ function App() {
           <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
             <Routes>
                 <Route path="/" element={<Home /> } />
+                <Route path="/sobre" element={<Sobre />} />
                 <Route path="/quemsomos" element={<Quemsomos /> } />
                 <Route path="/solucoes" element={<Solucoes />} />
                 <Route path="/contato" element={<Contato />} />
