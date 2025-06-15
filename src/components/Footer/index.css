@@ -1,0 +1,73 @@
+.mais-produtos {
+       width: 100vw;
+       padding: 10px;
+       background-color: #fff8f6;
+       text-align: center;
+ }
+               
+ .mais-produtos h3 {
+       font-size: 1.8rem;
+       margin-bottom: 1rem;
+       color: #634234;
+ }
+               
+ .mais-produtos p {
+       font-size: 1rem;
+       color: #5e4034;
+       font-family: Lato;
+       gap: 8px;
+ }
+ 
+ .adress{
+      padding: 10px;
+ }
+ 
+ .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+  
+    .social-link {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      color: #333;
+      font-size: 24px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  
+    /* Cores específicas para cada rede social */
+    .social-link:nth-child(1):hover { background-color: #1DB954; color: white; } /* Spotify */
+    .social-link:nth-child(2):hover { background-color: #1877F2; color: white; } /* Facebook */
+    .social-link:nth-child(3):hover { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); color: white; } /* Instagram */
+    .social-link:nth-child(4):hover { background-color: #FF0000; color: white; } /* YouTube */
+    .social-link:nth-child(5):hover { background-color: #000000; color: white; } /* X/Twitter */
+  
+    
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+ 
+ .copy-right{
+      margin-top: 10px;
+ }
