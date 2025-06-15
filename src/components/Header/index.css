@@ -1,0 +1,114 @@
+.area-header {
+      height: 100px;
+      width: 100%;
+      display: flex; 
+      padding-left: 4rem;
+      padding-right: 4rem;
+                 
+ }
+ 
+ /*Foratação área logo*/
+  .area-logo {
+      height: 100%;
+      width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+                 
+ }
+ 
+ .area-logo h1{
+      font-size: 24px;
+      padding: 15px;
+      text-transform: uppercase;
+      font-family: Sofia Pro;
+      color: #634234;
+ }
+ 
+ .area-logo img {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+ }
+ 
+  /*Formatação área de naveção*/
+ .area-nav {
+      height: 100%;
+      flex: 1;
+ }
+             
+ .nav-list {
+      height: 100%;
+      width: 65%;
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      justify-content: left;
+                 
+  }
+             
+ .nav-list-item {
+      padding: 8px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 20px;
+      color: #634234;
+      text-transform: uppercase;
+      letter-spacing: 0.7;
+  }
+             
+ .nav-list-item:hover{
+      color: #da5089;
+      cursor: pointer;
+ }
+             
+ .area-nav-banner {
+      height: 500px;
+      width:50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px 0px 100px 0px;
+ }
+             
+ .nav-banner-img {
+       width: 700px;
+      height: 900px;
+      
+ }
+ 
+ .nav-store-login {
+     display: flex;
+     gap: 10px;
+     
+ }
+ .store-login {
+     font-size: 18px;
+     text-transform: uppercase;
+     text-decoration: wavy;
+     color: #634234;
+     font-weight: bold;
+     padding: 5px 5px;
+     align-items: center;
+     justify-content: center;
+     border: 2px solid #8c4b3d;
+     border-radius: 30px;
+ }
+ 
+ 
+ .store-login:hover {
+     color: #da5089;
+     cursor: pointer;
+     
+ }
+ 
+ .nav-store-login {
+      width: 160px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ }

@@ -3,9 +3,10 @@ import { useMemo } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home/Home";
+import Home from "../pages/Home/Home.jsx";
 import Suporte from "../pages/Suporte";
-import Quemsomos from "../pages/quemsomos";
+import Sobre from "../pages/Sobre/Sobre";
+import Quemsomos from "../pages/Quemsomos";
 import Solucoes from "../pages/Solucoes";
 import Contato from "../pages/Contato/Contato";
 import Painel from "../pages/Painel";
@@ -23,7 +24,7 @@ function App() {
       <BrowserRouter>
         <div className="Content flex min-h-screen flex-col">
           <Header/>
-          <main className="flex flex-grow container mx-auto p-4 mt-[100px]">
+          <main>
             <Routes>
                 <Route path="/" element={<Home /> } />
                 <Route path="/sobre" element={<Sobre />} />
