@@ -5,7 +5,7 @@ function Home () {
     return(
       <>
       <div className="flex flex-col min-h-screen"> 
-      <section className="h-[428px] flex justify-start items-center bg-cover bg-center" >
+      <section className="h-[428px] flex justify-start items-center bg-cover bg-center">
         <div className="w-2/5 p-6 flex flex-col gap-3 text-black ml-[150px] mt-[50px]">
           <p className="font-semibold text-lg text-gray-800">Sabor inesquecível</p>
           <h1 className="text-[60px] leading-tight mt-[2px] mb-1.5 uppercase text-[#634234] font-serif">Memórias de Vó</h1>
