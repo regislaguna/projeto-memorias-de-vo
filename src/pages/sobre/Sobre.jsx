@@ -1,5 +1,6 @@
 import React, { useEffect } from "react" 
-import "./Sobre.css"
+import "../sobre/Sobre"
+import "../sobre/Sobre.css"
 
 function Sobre() {
     useEffect(() => {

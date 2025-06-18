@@ -30,7 +30,6 @@ function Contato() {
   }
 
   
-
   return (
     <div>
       <main className="content">
@@ -88,10 +87,10 @@ function Contato() {
               </div>
             </div>
 
-            {/* LADO ESQUERDO */}
+            {/* LADO ESQUERDO -- FORMULARIO */}
             <div className="right-information">
               <div className="form-container">
-                <form action="https://usebasin.com/f/58759e3a33e0" method="POST">
+                <form action="https://formsubmit.co/lucasmartines0803@gmail.com" method="POST" encType="multipart/form-data">
                   <div className="form-group">
                     <input type="text" name="name" placeholder="Nome" required />
                   </div>
@@ -123,7 +122,7 @@ function Contato() {
                     </div>
                   </div>
 
-                  {/* Campo de upload aparece só se mostrarUpload for true */}
+                  {/* Campo de upload aparece só se mostrar Upload se for true */}
                   <div className={`form-group ${mostrarUpload ? '' : 'hidden'}`} id="uploadArquivo">
                     <label>Envie um anexo:</label>
                     <input type="file" name="arquivo" />
