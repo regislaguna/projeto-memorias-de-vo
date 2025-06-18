@@ -4,6 +4,7 @@ function Home () {
    
     return(
       <>
+      <div className="flex flex-col min-h-screen"> 
       <section className="h-[428px] flex justify-start items-center bg-cover bg-center" >
         <div className="w-2/5 p-6 flex flex-col gap-3 text-black ml-[150px] mt-[50px]">
           <p className="font-semibold text-lg text-gray-800">Sabor inesquecível</p>
@@ -14,12 +15,12 @@ function Home () {
         </div>
       </section>
 
-      <section className="flex-grow flex-col">
+      <section className="flex-grow">
         {/* Seção de Produtos (agrupada) */}
         <section className="w-screen flex flex-col items-center mt-12 py-10">
           
           {/* Texto de chamada */}
-          <div className="text-center px-4">
+          <div className="text-center mt-10">
             <h3 className="text-4xl font-bold mb-4 uppercase text-gray-800">Cafés e Delícias</h3>
             <p className="text-xl max-w-2xl mx-auto text-gray-600">
               Conheça nossos cafés e bolos exclusivos pensados e preparados por nossa vórista renomada!
@@ -68,7 +69,7 @@ function Home () {
           </div>
 
           {/* Botão "Veja todos" */}
-          <div className="mt-8">
+          <div className="mt-8 text-center">
             <a href="#mais-produtos" className="inline-block bg-[#634234] text-white py-3 px-10 rounded-full text-base font-semibold uppercase no-underline hover:bg-[#d78f8f] transition-colors duration-300 shadow-lg">
               Veja todos os produtos
             </a>
@@ -76,6 +77,7 @@ function Home () {
 
         </section>
       </section>
+      </div>
   </>
 )
 }

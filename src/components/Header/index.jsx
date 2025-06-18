@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { isAuthenticated, logout } from "../../utils/storage";
-//import '../Header/index.css'
+
 
 const Header = () => {
 
@@ -12,10 +12,11 @@ const Header = () => {
 
     const navigate = useNavigate();
     return(
-        <header className="h-[100px] w-full flex items-center px-16">
-          <div className="h-full w-[600px] flex justify-center items-center ml-[30px]">
+        <header className="h-[100px] w-full flex items-center">
+          <div className="flex-grow">
+          <div className="h-full w-full flex justify-center items-center">
             <img src={process.env.PUBLIC_URL + 'img/logovo.png'} className="w-[75px] h-[75px] rounded-full"/>
-            <h1 className="text-2xl p-[15px] uppercase font-sofia text-[#634234]">Memórias de Vó</h1>
+            <h1 className="text-2xl uppercase font-sofia text-[#634234]">Memórias de Vó</h1>
           </div>
           <nav className="h-full flex-1 flex justify-between items-center">
             <ul className="flex h-full items-center gap-[10px]">
@@ -24,14 +25,14 @@ const Header = () => {
               <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos"></Link>Produtos</li>
               <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contatos"></Link>Contatos</li>
             </ul>
-          <div className="h-[700px] w-[900px] flex justify-center items-center my-[100px]">
-            <Link to="/" >
-            <img className="w-[700px] h-[900px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
-            </Link>
-          </div>
-          <div className="flex items-center justify-center w-40 h-[100px] gap-[10px]">
+                      <div className="flex items-center justify-center w-40 h-[100px] gap-[10px]">
             <p className="text-lg border-2 border-[#8c4b3d] rounded-full"><Link to="/login"></Link>Login</p>
             <p className="text-lg border-2 border-[#8c4b3d] rounded-full"><Link to="/delivery"></Link>Delivery</p>
+          </div>
+          <div className="h-[180px] w-[650px] flex">
+            <Link to="/" >
+            <img className=" " src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
+            </Link>
           </div>
             { isAuthenticated () &&
                   <div className="flex justify-center items-center">
@@ -62,6 +63,7 @@ const Header = () => {
           <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Contato">Contato</Link></li>
           <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Suporte">Suporte</Link></li>
         </ul>
+      </div>
       </div>
     </header>
     )
