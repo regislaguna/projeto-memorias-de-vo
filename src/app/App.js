@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home.jsx";
 import Suporte from "../pages/Suporte";
-import Sobre from "../pages/Sobre/Sobre";
+import Sobre from "../pages/Sobre/Sobre.jsx";
 import Quemsomos from "../pages/Quemsomos";
 import Solucoes from "../pages/Solucoes";
 import Contato from "../pages/Contato/Contato";
@@ -15,11 +15,6 @@ import PrivateRoute from "../components/Auth";
 
 function App() {
  
-  const produo = useMemo(() => [
-    {image: '/icons/icon_network.svg', title: 'Otimize sua infraestrutura', texto: 'Soluções avancadas de infraestrutura, gerencimaneto dos recursos de rede proporcionando eficiencia seguranca e escalabilidade'},
-    {image: '/icons/icon_network.svg', title: 'Restauração e Backup', texto: 'Soluções avancadas de infraestrutura, gerencimaneto dos recursos de rede proporcionando eficiencia seguranca e escalabilidade'},
-
-  ],[])
      return (
       <BrowserRouter>
         <div className="Content flex min-h-screen flex-col">
