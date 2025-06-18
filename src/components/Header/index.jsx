@@ -4,7 +4,6 @@ import { isAuthenticated, logout } from "../../utils/storage";
 //import '../Header/index.css'
 
 const Header = () => {
-
     const [isMenuOpen, setIsMenuOpen] = useState (false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
