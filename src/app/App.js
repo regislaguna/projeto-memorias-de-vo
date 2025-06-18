@@ -14,6 +14,7 @@ import Contato from "../pages/Contato/Contato";
 import Painel from "../pages/Painel"; 
 import Login from "../pages/Login"; 
 
+//Teste novo
 //AUTENTICAÇÂO
 import PrivateRoute from "../components/Auth";
 
