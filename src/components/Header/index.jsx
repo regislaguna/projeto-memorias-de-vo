@@ -11,34 +11,34 @@ const Header = () => {
 
     const navigate = useNavigate();
     return(
-        <header className="h-[100px] w-full flex items-center">
-          <div className="flex-grow">
-          <div className="h-full w-full flex justify-center items-center">
+        <header className="">
+          <div className="h-[100px] w-full flex items-center">
+          <div className="flex ml-60 justify-center items-center gap-6">
             <img src={process.env.PUBLIC_URL + 'img/logovo.png'} className="w-[75px] h-[75px] rounded-full"/>
-            <h1 className="text-2xl uppercase font-sofia text-[#634234]">Memórias de Vó</h1>
+            <h1 className="flex text-2xl uppercase font-sofia text-[#634234]">Memórias de Vó</h1>
           </div>
-          <nav className="h-full flex-1 flex justify-between items-center">
+          <nav className=" ml-40 h-full flex-1 flex justify-center">
             <ul className="flex h-full items-center gap-[10px]">
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/"></Link>Início</li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/sobre"></Link>Sobre</li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos"></Link>Produtos</li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contatos"></Link>Contatos</li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/quemsomos">Sobre</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos">Produtos</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
             </ul>
-                      <div className="flex items-center justify-center w-40 h-[100px] gap-[10px]">
-            <p className="text-lg border-2 border-[#8c4b3d] rounded-full"><Link to="/login"></Link>Login</p>
-            <p className="text-lg border-2 border-[#8c4b3d] rounded-full"><Link to="/delivery"></Link>Delivery</p>
+          </nav>
+          <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10">
+            <p className="text-lg border-solid border-[#8c4b3d] uppercase tracking-wide hover:text-[ #da5089] cursor-pointer rounded-2x1"><Link to="/login">Login</Link></p>
+            <p className="text-lg border-2 border-[#8c4b3d] uppercase tracking-wide hover:text-[ #da5089] cursor-pointer rounded-2xl"><Link to="/delivery">Delivery</Link></p>
           </div>
-          <div className="h-[180px] w-[650px] flex">
+          <div className="absolute h-[180px] w-[650px] flex right-0 z-0">
             <Link to="/" >
-            <img className=" " src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
+            <img className="h-[900px] w-[1100px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
             </Link>
           </div>
-            { isAuthenticated () &&
+          { isAuthenticated () &&
                   <div className="flex justify-center items-center">
                     <button className="bg-color-primary text-white font-bold p-3 rounded-[8px]" onClick={() => {logout(); navigate('/login')}}>Logout</button>
                   </div>
                 }
-          </nav>
             {/* menu lateral mobile */}
             <div
         className={`w-[33%] h-screen absolute top-0 left-0 bg-white opacity-90 flex flex-col justify-center items-center space-y-6 md:hidden ${
