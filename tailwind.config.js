@@ -1,5 +1,6 @@
 const { plugins } = require("./postcss.config");
 
+
 module.exports = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,7 +16,11 @@ module.exports = {
             xl: "1280px",
         },
         fontFamily: {
+            'fontregular': ['FonteRegular'],
+            'fontsemibold': ['FonteSemiBold'],
+            'fontbold': ['FonteBold'],
             awesome: "FontAwesome"
+            
         },
         extend: {
             colors: {
