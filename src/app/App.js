@@ -14,15 +14,9 @@ import Contato from "../pages/Contato/Contato";
 import Painel from "../pages/Painel"; 
 import Login from "../pages/Login"; 
 
-//Teste novo
+
 //AUTENTICAÇÂO
 import PrivateRoute from "../components/Auth";
-
-function App() {
-  const produo = useMemo(() => [
-    {image: '/icons/icon_network.svg', title: 'Otimize sua infraestrutura', texto: 'Soluções avancadas de infraestrutura, gerencimaneto dos recursos de rede proporcionando eficiencia seguranca e escalabilidade'},
-    {image: '/icons/icon_network.svg', title: 'Restauração e Backup', texto: 'Soluções avancadas de infraestrutura, gerencimaneto dos recursos de rede proporcionando eficiencia seguranca e escalabilidade'},
-  ],[])
 
 
 function App() {
@@ -55,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
