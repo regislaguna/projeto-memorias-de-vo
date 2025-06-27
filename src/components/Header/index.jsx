@@ -20,10 +20,12 @@ const Header = () => {
           </div>
           <nav className=" ml-40 h-full flex-1 flex justify-center">
             <ul className="flex h-full items-center gap-[10px]">
-              <li className="p-2 font-fontbold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
-              <li className="p-2 font-fontbold  text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/quemsomos">Sobre</Link></li>
-              <li className="p-2 font-fontbold  text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos">Produtos</Link></li>
-              <li className="p-2 font-fontbold  text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Sobre">Sobre</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos">Produtos</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
+
+             
             </ul>
           </nav>
           <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10 borde-solid border-2 border-[#8c4b3d] rounded-2x1">
