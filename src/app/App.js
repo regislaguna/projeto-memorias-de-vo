@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 // IMPORTANDO PAGINAS
 import Home from "../pages/Home/Home.jsx"; 
-import Sobre from "../pages/sobre/Sobre.jsx"; 
+import Sobre from "../pages/Sobre/Sobre.jsx";
 import Solucoes from "../pages/Solucoes"; //PRODUTO || DEFINIR COM ERICK
 import Contato from "../pages/Contato/Contato"; 
 import Painel from "../pages/Painel"; 

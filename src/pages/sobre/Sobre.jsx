@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import "../sobre/sobre.css";
 
 // Ícones
 import { FaBookOpen, FaHeart, FaUsers, FaCoffee, FaMugHot, FaClock, FaLeaf } from "react-icons/fa";
+
+import React, { useEffect } from "react" 
+
+import "../Sobre/Sobre.css"
 
 function Sobre() {
   const btnTopoRef = useRef(null);
