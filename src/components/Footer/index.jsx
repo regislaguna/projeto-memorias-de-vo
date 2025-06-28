@@ -12,9 +12,6 @@ function Footer() {
                 <h3 className="text-[1.8rem] mb-4 text-[#634234] font-sans justify-center">Mais delícias da Vó</h3>
                 <p>Peça nossos bolos, tortas e quitutes irresistíveis pelo delivery❤️</p>
             </div>
-            <div className="p-2.5">
-            <p className="text-base text-[#5e4034] mb-2"> Rua da Palmirinha, n 80, Jardim Enaldinho, CEP: 19035-963</p>
-            </div>
             <div className="flex flex-wrap gap-[15px] justify-center items-center p-5">
             <Link to="#" className="social-link hover:bg-[#1DB954]" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
                 <i className="fab fa-spotify"></i>

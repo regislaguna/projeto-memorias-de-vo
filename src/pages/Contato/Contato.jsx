@@ -31,6 +31,7 @@ function Contato() {
 
   return (
     <div>
+
       <main className="content">
         <section className="content-section ">
           {/* TÍTULO */}
@@ -42,7 +43,7 @@ function Contato() {
           </div>
 
           {/* SEÇÃO DIVIDIDA */}
-          <div className="content-base">
+          <div className="content-base z-10" >
             {/* LADO DIREITO */}
             <div className="left-informations ">
               <div className="container-left ">
