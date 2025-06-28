@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 // IMPORTANDO PAGINAS
 import Home from "../pages/Home/Home.jsx"; 
-import Sobre from "../pages/Sobre/Sobre.jsx";
+import Sobre from "../pages/Sobre/Sobre"; 
 import Solucoes from "../pages/Solucoes"; //PRODUTO || DEFINIR COM ERICK
 import Contato from "../pages/Contato/Contato"; 
 import Painel from "../pages/Painel"; 
@@ -18,10 +18,7 @@ import Login from "../pages/Login";
 //AUTENTICAÇÂO
 import PrivateRoute from "../components/Auth";
 
-
 function App() {
- 
-
      return (
       <BrowserRouter>
         <div className="Content flex min-h-screen flex-col">

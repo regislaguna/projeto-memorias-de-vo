@@ -29,15 +29,15 @@ function Contato() {
     }
   }
 
-  
   return (
     <div>
-      <main className="content ">
-        <section className="content-section">
+
+      <main className="content">
+        <section className="content-section ">
           {/* TÍTULO */}
           <div className="title-main">
             <h1 className="title-h1">Contate-nos</h1>
-            <address className="sub-title">
+            <address className="sub-title ">
               Estamos esperando por você!!
             </address>
           </div>
@@ -46,7 +46,7 @@ function Contato() {
           <div className="content-base z-10" >
             {/* LADO DIREITO */}
             <div className="left-informations ">
-              <div className="container-left">
+              <div className="container-left ">
                 {/* TÍTULO DAS INFORMAÇÕES */}
                 <div className="title-information">
                   <h2>Informações de Contato</h2>
@@ -81,14 +81,13 @@ function Contato() {
                     <a><FaFacebook/></a>
                     <a><FaInstagram/></a>
                     <a><FaSpotify/></a>
-                    
                   </div>
                 </div>
               </div>
             </div>
 
             {/* LADO ESQUERDO -- FORMULARIO */}
-            <div className="right-information">
+            <div className="right-information ">
               <div className="form-container">
                 <form action="https://formsubmit.co/lucasmartines0803@gmail.com" method="POST" encType="multipart/form-data">
                   <div className="form-group">
