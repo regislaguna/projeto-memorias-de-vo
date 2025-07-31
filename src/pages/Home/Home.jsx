@@ -35,7 +35,8 @@ const productsData = [
 
 // Componente para um único Cartão de Produto
 const ProductCard = ({ product }) => (
-  <div className="relative w-[280px] h-[380px] cursor-pointer group shadow-lg rounded-2xl overflow-hidden">
+  // cria uma rota e ao clicar vai para página de produtos
+  <Link to="/produtos" className="relative w-[280px] h-[380px] cursor-pointer group shadow-lg rounded-2xl overflow-hidden">
     <img
       src={process.env.PUBLIC_URL + product.image}
       alt={product.alt}
@@ -45,7 +46,7 @@ const ProductCard = ({ product }) => (
       <h5 className="text-lg font-bold uppercase tracking-wider">{product.title}</h5>
       <p className="mt-2 text-sm text-justify">{product.description}</p>
     </div>
-  </div>
+  </Link>
 );
 
 function Home () {
@@ -81,14 +82,6 @@ function Home () {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-
-          {/* Botão "Veja todos" */}
-          <div className="mt-8 text-center">
-            <a href="#mais-produtos" className="inline-block bg-[#634234] text-white py-3 px-10 rounded-full text-base font-semibold uppercase no-underline hover:bg-[#d78f8f] transition-colors duration-300 shadow-lg">
-              Veja todos os produtos
-            </a>
-          </div>
-
         </section>
       </section>
       </div>

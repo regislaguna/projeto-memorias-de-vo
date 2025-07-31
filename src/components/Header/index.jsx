@@ -1,15 +1,20 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { isAuthenticated, logout } from "../../utils/storage";
 
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState (false);
+      // Hooks devem ser chamados no topo do componente
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation(); // <-- CORREÇÃO 1: Mover o useLocation para cá
+
+    // A variável agora é declarada no escopo correto
+    const ehPaginaInicial = location.pathname === "/"; // <-- CORREÇÃO 2: Declarar a variável aqui
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
-
-    const navigate = useNavigate();
     
     return(
         <header className="relative w-full">
@@ -28,15 +33,20 @@ const Header = () => {
              
             </ul>
           </nav>
-          <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10 borde-solid border-2 border-[#8c4b3d] rounded-2x1">
-            <p className="text-lg  uppercase tracking-wide hover:text-[#da5089] cursor-pointer  font-fontbold"><Link to="/login">Login</Link></p>
-            <p className="text-lg border-2 border-[#8c4b3d] uppercase tracking-wide hover:text-[#da5089] cursor-pointer rounded-2xl font-fontbold"><Link to="/delivery">Delivery</Link></p>
+          <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10">
+            <p><Link className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300" to="/login">Login</Link></p>
+            <p><Link className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300" to="/delivery">Delivery</Link></p>
           </div>
+
+              {/* Esta é a condição que mostra/esconde o banner */}
+                {ehPaginaInicial && (
           <div className="absolute h-[180px] w-[650px] flex right-0 z-0">
             <Link to="/" >
             <img className="h-[900px] w-[1100px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
             </Link>
           </div>
+                )}
+
           { isAuthenticated () &&
                   <div className="flex justify-center items-center">
                     <button className="bg-color-primary text-white font-bold p-3 rounded-[8px]" onClick={() => {logout(); navigate('/login')}}>Logout</button>
