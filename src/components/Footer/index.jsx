@@ -11,8 +11,7 @@ function Footer() {
         /*
           AQUI ESTÁ A MUDANÇA:
           - Adicionamos 'border-t' para criar uma borda apenas no topo.
-          - 'border-gray-200' define uma cor de linha cinza bem clara e sutil.
-        */
+                */
         // A linha separadora já está aqui: 'border-t' (borda no topo)
         <footer className="flex w-full color-fundo text-center font-lato text-gray-800 border-t border-gray-200">
             <div className="container mx-auto px-4 py-6 flex flex-col items-center">
