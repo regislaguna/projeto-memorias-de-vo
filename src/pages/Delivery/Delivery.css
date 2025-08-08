@@ -1,0 +1,36 @@
+.App {
+    text-align: center;
+  }
+  
+  .menu {
+    margin: 20px;
+  }
+  
+  .produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .produto {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .preco {
+    font-weight: bold;
+  }
+  
+  .botao-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }

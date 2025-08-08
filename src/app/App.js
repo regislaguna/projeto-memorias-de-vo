@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+
 // IMPORTANDO PAGINAS
 import Home from "../pages/Home/Home.jsx"; 
 import Sobre from "../pages/sobre/Sobre"; 
@@ -13,6 +14,7 @@ import Solucoes from "../pages/Solucoes"; //PRODUTO || DEFINIR COM ERICK
 import Contato from "../pages/Contato/Contato"; 
 import Painel from "../pages/Painel"; 
 import Login from "../pages/Login"; 
+import Delivery from "../pages/Delivery/Delivery.jsx"
 
 
 //AUTENTICAÇÂO
@@ -31,6 +33,8 @@ function App() {
                 <Route path="/solucoes" element={<Solucoes/>}/>
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/delivery" element={<Delivery/>}/>
+
 
                 {/* ACESSO PRIVADO AO PAINEL */}
                 <Route path="/painel" element={
