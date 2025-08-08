@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import '../Contato/Contato.css';
+import '../Contato/Contato.css'
 
 //FORMATAÇÂO NUMERO
 import ReactInputMask from 'react-input-mask';
 
 // ICONES E FIGURAS
-import{FaFacebook} from 'react-icons/fa';
-import{ FaInstagram } from 'react-icons/fa';
-import { FaSpotify } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaMap } from 'react-icons/fa';
 import { FaRocketchat } from 'react-icons/fa';
@@ -37,7 +34,7 @@ function Contato() {
           {/* TÍTULO */}
           <div className="title-main">
             <h1 className="title-h1">Contate-nos</h1>
-            <address className="sub-title ">
+            <address className="sub-title">
               Estamos esperando por você!!
             </address>
           </div>
@@ -72,16 +69,11 @@ function Contato() {
                   <div className="iterative-information">
                     <FaMap className="fa-solid fa-map-location-dot icon-information"/>
                     <address className="location-text">
-                      Av. Manoel Goulart Nº 2881, <br /> Vila Santa Helena, <br />Presidente Prudente - SP
+                      <a href='https://maps.app.goo.gl/uppUhjQS9aAbDeJr6' target='_blank'>Av. Manoel Goulart Nº 2881, <br /> Vila Santa Helena, <br />Presidente Prudente - SP</a>
                     </address>
                   </div>
 
-                  {/* REDES SOCIAIS */}
-                  <div className="social-media">
-                    <a><FaFacebook/></a>
-                    <a><FaInstagram/></a>
-                    <a><FaSpotify/></a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
