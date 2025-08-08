@@ -66,43 +66,12 @@ function Sobre() {
                             <h2 className="sub-titles"><FaUsers />Nossa Equipe</h2>
                             <p>
                                 A equipe da "Memórias de Vó" é composta por apaixonados por café e por boas histórias.
-                                Somos [Número] pessoas dedicadas a fazer com que sua visita seja inesquecível.
+                                Somos pessoas dedicadas a fazer com que sua visita seja inesquecível.
                                 Cada barista, atendente e chef de cozinha compartilha da nossa visão de transformar o simples ato de tomar um café em uma verdadeira celebração das memórias.
                             </p>
                         </div>
                         <div className="bloco-imagem">
                             <img src={`${process.env.PUBLIC_URL}/img/equip.jpg`} alt="Nossa Equipe" className="images" />
-                        </div>
-                    </div>
-
-                    {/* BLOCO FINAL */}
-                    <div className="sobre-conteudo">
-                        <h2>Memórias que Aquecem o Coração: A História da Nossa Cafeteria</h2>
-                        <p>
-                            Na Memórias de Vó, nossa missão é resgatar os momentos mais doces da vida, trazendo à tona as lembranças mais queridas por meio de sabores especiais.
-                        </p>
-                        <p>
-                            Inspirados nas memórias afetivas de avós e familiares, oferecemos uma experiência única, repleta de aromas e sabores que revivem momentos inesquecíveis.
-                        </p>
-                        <p>
-                            Nosso compromisso é atrair um público de todas as idades, proporcionando um ambiente acolhedor e familiar.
-                        </p>
-                        <p>
-                            Venha reviver suas melhores memórias com a gente!
-                        </p>
-
-                        <div className="destaque">
-                            <div className="destaque-item">
-                                <div className="destaque-icone">☕</div>
-                                <h3>Tecnologia Avançada</h3>
-                                <p>Precisão digital no controle de temperatura</p>
-                                <div className="destaque-icone">⏱️</div>
-                                <h3>Rápido Preparo</h3>
-                                <p>Seu café em apenas 1 minuto</p>
-                                <div className="destaque-icone">🌱</div>
-                                <h3>Sustentável</h3>
-                                <p>Materiais eco-friendly e recicláveis</p>
-                            </div>
                         </div>
                     </div>
                 </div>
