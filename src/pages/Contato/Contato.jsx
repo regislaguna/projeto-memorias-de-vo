@@ -19,7 +19,7 @@ function Contato() {
   // Função que atualiza o estado conforme a opção selecionada
   function handleRadioChange(event) {
     const valor = event.target.value;
-    if (valor === 'INP3') {
+    if (valor === 'Parcerias') {
       setMostrarUpload(true);
     } else {
       setMostrarUpload(false);
@@ -102,13 +102,13 @@ function Contato() {
                     <label className="radio-label">Assunto</label>
                     <div className="radio-group" onChange={handleRadioChange}>
                       <label>
-                        <input type="radio" name="Input" value="INP1" /> Elogios!
+                        <input type="radio" name="Input" value="Elogios" /> Elogios!
                       </label>
                       <label>
-                        <input type="radio" name="Input" value="INP2" /> Reclamações!
+                        <input type="radio" name="Input" value="Reclamações" /> Reclamações!
                       </label>
                       <label>
-                        <input type="radio" name="Input" value="INP3" /> Parcerias!
+                        <input type="radio" name="Input" value="Parcerias" /> Parcerias!
                       </label>
                     </div>
                   </div>
