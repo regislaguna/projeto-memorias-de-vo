@@ -13,6 +13,7 @@ import Solucoes from "../pages/Solucoes"; //PRODUTO || DEFINIR COM ERICK
 import Contato from "../pages/Contato/Contato"; 
 import Painel from "../pages/Painel"; 
 import Login from "../pages/Login"; 
+import Produto from "../pages/Produto/Produto.jsx"
 
 
 //AUTENTICAÇÂO
@@ -25,12 +26,14 @@ function App() {
           <Header/>
           <main>
             <Routes>
+
                 {/* ROTAS */}
                 <Route path="/" element={<Home/>}/>
                 <Route path="/sobre" element={<Sobre/>}/>
                 <Route path="/solucoes" element={<Solucoes/>}/>
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/produto" element={<Produto/>}/>
 
                 {/* ACESSO PRIVADO AO PAINEL */}
                 <Route path="/painel" element={

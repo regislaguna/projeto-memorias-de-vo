@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Contato/Contato.css'
+import '../Contato/contato.css'
 
 //FORMATAÇÂO NUMERO
 import ReactInputMask from 'react-input-mask';

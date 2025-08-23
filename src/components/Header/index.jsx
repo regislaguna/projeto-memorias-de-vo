@@ -27,11 +27,10 @@ const Header = () => {
             <ul className="flex h-full items-center gap-[10px]">
               <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
               <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Sobre">Sobre</Link></li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos">Produtos</Link></li>
+              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produto">Produtos</Link></li>
               <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
-
-             
             </ul>
+
           </nav>
           <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10">
             <p><Link className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300" to="/login">Login</Link></p>
