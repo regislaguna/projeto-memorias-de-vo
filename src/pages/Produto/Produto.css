@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #5a3921;
+  font-size: 2.2em;
+  font-family: "SoDo Sans", "ellograph-cf", monospace;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin: 12px 0 6px;
+}
+
+
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+  min-height: 40px;
+}
+
+.card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff7b54;
+  font-size: 1.1em;
+}
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.filtros button {
+  padding: 8px 16px;
+  border: 2px solid #d48a00;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #af7302;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: #d48a00;
+  color: #fff;
+}
+
+.filtros button.ativo {
+  background-color: #d48a00;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}

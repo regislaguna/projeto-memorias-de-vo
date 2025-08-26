@@ -8,8 +8,8 @@ import { FaBook } from "react-icons/fa"
 import { FaUsers } from "react-icons/fa";
 
 // IMPORTANDO PAGINA
-import "./Sobre"
-import "./Sobre.css"
+import "../sobre/Sobre"
+import "../sobre/sobre.css"
 
 function Sobre() {
     return (
