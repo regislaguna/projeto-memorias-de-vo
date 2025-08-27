@@ -81,12 +81,12 @@ function Delivery({ onAdicionarAoCarrinho}) {
   
 
   return (
-    <div className="bg-stone-50 min-h-screen font-sans">
+    <div className="bg-pink-50 min-h-screen font-sans">
       {/* Cabeçalho Fixo */}
       
 
       {/* Conteúdo Principal */}
-      <main className="container mx-auto p-8">
+      <main className="mx-auto p-8">
         <BarradeBuscaFiltros
           termoBusca={termoBusca}
           onBuscaChange={(e) => setTermoBusca(e.target.value)}

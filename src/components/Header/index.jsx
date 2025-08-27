@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { isAuthenticated, logout } from "../../utils/storage";
+import Logo from '../../assets/img/logovo.png';
+import BannerHome from '../../assets/img/bannerteste.png';
 
 const IconeCarrinho = ({ contagem }) => (
     <div className="relative cursor-pointer transform hover:scale-110 transition-transform">
@@ -31,15 +33,15 @@ const Header = ({ carrinhoItens = [], onAbrirCarrinho }) => {
         <header className="relative w-full h-[100px]"> {/* Definimos uma altura fixa no container principal */}
           {/* Container para Logo e Navegação (fluxo normal) */}
           <div className="h-full w-full flex items-center">
-            <div className="flex ml-60 justify-center items-center gap-4">
-                <img src={process.env.PUBLIC_URL + 'img/logovo.png'} className="w-[75px] h-[75px] rounded-full" alt="Logo Memórias de Vó"/>
+            <div className="flex ml-40 justify-center items-center gap-4">
+                <img src={Logo} className="w-[75px] h-[75px] rounded-full" alt="Logo Memórias de Vó"/>
                 <h1 className="flex text-2xl uppercase font-sofia text-[#634234] font-fontsemibold">Memórias de Vó</h1>
             </div>
-            <nav className=" ml-0 h-full flex-1 flex justify-center">
+            <nav className="mr-60 h-full flex-1 flex justify-center">
                 <ul className="flex h-full items-center gap-[10px]">
                   <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
                   <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Sobre">Sobre</Link></li>
-                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/delivery">Delivery</Link></li>
+                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produtos">Produtos</Link></li>
                   <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
                 </ul>
             </nav>
@@ -52,7 +54,7 @@ const Header = ({ carrinhoItens = [], onAbrirCarrinho }) => {
               {/* Ícone-botão para abrir o modal */}
               <button 
                 onClick={onAbrirCarrinho} 
-                className="bg-transparent border-none"
+                className="bg-transparent border-none hover:bg-pink-300"
               >
                   <IconeCarrinho contagem={contagemItensCarrinho} />
               </button>
@@ -60,7 +62,7 @@ const Header = ({ carrinhoItens = [], onAbrirCarrinho }) => {
               {/* Link de texto com estilo sutil e moderno */}
               <Link 
                 to="/delivery" 
-                className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300"
+                className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-[#da5089] transition-colors duration-300"
               >
                   Delivery
               </Link>
@@ -71,7 +73,7 @@ const Header = ({ carrinhoItens = [], onAbrirCarrinho }) => {
           {ehPaginaInicial && (
             <div className="absolute h-[180px] w-[650px] flex right-0 top-0 z-0">
               <Link to="/" >
-                <img className="h-[900px] w-[1100px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'} alt="Banner"/>
+                <img className="h-[900px] w-[1100px]" src={BannerHome} alt="Banner"/>
               </Link>
             </div>
           )}

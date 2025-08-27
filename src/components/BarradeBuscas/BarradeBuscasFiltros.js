@@ -11,20 +11,20 @@ import React from 'react';
 
 const BarradeBuscaFiltros = ({ termoBusca, onBuscaChange, categoriaSelecionada, onCategoriaChange, categorias }) => {
   return (
-    <div className="bg-stone-100 p-4 rounded-lg mb-8 flex flex-col sm:flex-row items-center gap-4">
+    <div className="bg-pink-300 p-4 rounded-lg mb-8 flex flex-col sm:flex-row items-center gap-4">
       {/* Campo de Busca */}
       <input
         type="text"
         placeholder="Buscar por nome..."
         value={termoBusca}
         onChange={onBuscaChange}
-        className="w-full sm:w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-800"
+        className="w-full sm:w-1/2 p-2 border border-pink-400 rounded-md focus:outline-none focus:ring-2 focus:brown-300"
       />
       {/* Filtros de Categoria */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 ml-80">
         <button
           onClick={() => onCategoriaChange('Todos')}
-          className={`px-4 py-2 text-sm rounded-full transition-colors ${categoriaSelecionada === 'Todos' ? 'bg-yellow-800 text-white' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
+          className={`border-solid border-pink-500 px-2 py-2 text-sm rounded-full transition-colors ${categoriaSelecionada === 'Todos' ? 'bg-white text-black' : 'bg-white text-black hover:bg-pink-400'}`}
         >
           Todos
         </button>
@@ -32,7 +32,7 @@ const BarradeBuscaFiltros = ({ termoBusca, onBuscaChange, categoriaSelecionada, 
           <button
             key={categoria}
             onClick={() => onCategoriaChange(categoria)}
-            className={`px-4 py-2 text-sm rounded-full transition-colors ${categoriaSelecionada === categoria ? 'bg-yellow-800 text-white' : 'bg-white text-gray-700 hover:bg-gray-200'}`}
+            className={` border-solid border-pink-500 px-2 py-2 text-sm rounded-full transition-colors ${categoriaSelecionada === categoria ? ' bg-white text-black' : 'bg-white text-black hover:bg-pink-400'}`}
           >
             {categoria}
           </button>

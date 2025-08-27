@@ -17,15 +17,15 @@ const CardProduto = ({ produto, onAdicionarAoCarrinho }) => {
           {`Por ${produto.cozinheiro.nome} (Receita da Vó)`}
         </p>
         <div className="flex justify-between items-center mt-4">
-          <span className="text-lg font-bold text-yellow-900">{`R$ ${produto.preco.toFixed(2)}`}</span>
+          <span className="text-lg font-bold text-black">{`R$ ${produto.preco.toFixed(2)}`}</span>
           <div className="flex items-center">
-            <span className="text-yellow-500">⭐</span>
+            <span className="text-black">⭐</span>
             <span className="ml-1 text-gray-600">{produto.avaliacao}</span>
           </div>
         </div>
         <button
           onClick={() => onAdicionarAoCarrinho(produto)}
-          className="w-full mt-4 bg-yellow-800 text-white py-2 rounded-lg hover:bg-yellow-900 transition-colors duration-300"
+          className="w-full mt-4 bg-slate-500 text-white py-2 rounded-lg hover:bg-slate-900 transition-colors duration-300"
         >
           Adicionar ao Carrinho
         </button>

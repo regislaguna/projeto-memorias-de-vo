@@ -2,6 +2,7 @@ import { useState } from "react";
 import { users } from "../data/users-constants";
 import { useNavigate } from "react-router-dom";
 import { login } from "../utils/storage";
+import axios from 'axios';
 
 function Login () {
     const [email, setEmail] = useState('');
@@ -9,10 +10,26 @@ function Login () {
     const [error, setError] = useState('');
 // console.log(email)
  // console.log(senha)
+ const api = axios.create({
+    baseURL: 'localhost//3333' // URL base da nossa API
+  });
  const navigate = useNavigate();
-    function handleLogin (){
+ 
+    async function handleLogin (){
+        const dadosParaEnviar = {
+            email: email,
+            senha: senha
+          };
         //const userFound = users.filter(user => user.email === email);
-        const userFound = users.find(user => user.email === email);
+        const response = await axios.get('localhost:3333/login',dadosParaEnviar);
+        console.log(response.data);
+       
+        
+// Criamos uma "instância" do axios. Todas as nossas chamadas de API
+        console.log(response.data);
+
+        //const userFound = users.find(user => user.email === email);
+        const userFound = response.data;
         console.log(userFound);
         // null
         // undefined

@@ -1,32 +1,37 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import cafesImage from '../../assets/img/cafescard.jpg'; // Ajuste o caminho se necessário
+import bolosImage from '../../assets/img/boloscard.jpg';
+import browniesImage from '../../assets/img/browniescard.jpg';
+import salgadosImage from '../../assets/img/salgadoscard.jpg';
+
 // Dados dos produtos para renderização dinâmica
 const productsData = [
   {
     id: 1,
-    image: '/img/cafescard.jpg',
+    image: cafesImage,
     alt: 'Cafés Especiais',
     title: 'Cafés Especiais',
     description: 'Desfrute de uma seleção premium de cafés, preparados com grãos 100% arábica e técnicas artesanais. Cada xícara é uma experiência única.',
   },
   {
     id: 2,
-    image: '/img/boloscard.jpg',
+    image: bolosImage,
     alt: 'Bolos Caseiros',
     title: 'Bolos Caseiros',
     description: 'Delicie-se com nossos bolos feitos diariamente, usando ingredientes frescos e receitas tradicionais com massas fofinhas e recheios cremosos.',
   },
   {
     id: 3,
-    image: '/img/browniescard.jpg',
+    image: browniesImage,
     alt: 'Brownies Premium',
     title: 'Brownies Premium',
     description: 'Pedaços de puro prazer em chocolate! Nossos brownies são densos, úmidos e cheios de sabor, com opções que incluem nozes e doce de leite.',
   },
   {
     id: 4,
-    image: '/img/salgadoscard.jpg',
+    image: salgadosImage,
     alt: 'Salgados Artesanais',
     title: 'Salgados Artesanais',
     description: 'Lanches saborosos e crocantes, feitos com massa folhada ou caseira e recheios generosos. Ideais para um café da manhã ou um lanche rápido.',
@@ -38,7 +43,7 @@ const ProductCard = ({ product }) => (
   // cria uma rota e ao clicar vai para página de produtos
   <Link to="/produtos" className="relative w-[280px] h-[380px] cursor-pointer group shadow-lg rounded-2xl overflow-hidden">
     <img
-      src={process.env.PUBLIC_URL + product.image}
+      src={product.image}
       alt={product.alt}
       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
     />
@@ -70,8 +75,8 @@ function Home () {
           
           {/* Texto de chamada */}
           <div className="text-center mt-10 z-10">
-            <h3 className="text-4xl font-bold mb-4 uppercase text-gray-800 justify-center ">Cafés e Delícias</h3>
-            <p className="text-xl max-w-2xl mx-auto text-gray-600 z-10">
+            <h3 className="text-4xl font-bold mb-4 uppercase text-[#634234] justify-center ">Cafés e Delícias</h3>
+            <p className="text-xl max-w-2xl mx-auto text-black z-10">
               Conheça nossos cafés e bolos exclusivos pensados e preparados por nossa vórista renomada!
             </p>
           </div> 

@@ -1,4 +1,4 @@
-.area-header {
+/* .area-header {
       height: 100px;
       width: 100%;
       display: flex; 
@@ -8,7 +8,7 @@
  }
  
  /*Foratação área logo*/
-  .area-logo {
+  /* .area-logo {
       height: 100%;
       width: 600px;
       display: flex;
@@ -31,9 +31,9 @@
       height: 75px;
       border-radius: 50%;
  }
- 
+  */
   /*Formatação área de naveção*/
- .area-nav {
+ /* .area-nav {
       height: 100%;
       flex: 1;
  }
@@ -111,4 +111,4 @@
       display: flex;
       justify-content: center;
       align-items: center;
- }
+ } */ 

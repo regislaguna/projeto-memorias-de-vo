@@ -3,8 +3,8 @@
 /* Definição da fonte MinhaFonte-Regular */
 @font-face {
   font-family: 'FonteRegular'; /* Nome que você usará no Tailwind */
-  src: url('/public/fonts/SoDoSans-Regular.woff2') format('woff2'), /* Caminho relativo à pasta public */
-       url('/public/fonts/SoDoSans-Regular.woff') format('woff');
+  src: url('/src/assets/fonts/SoDoSans-Regular.woff2') format('woff2'), /* Caminho relativo à pasta public */
+       url('/src/assets/fonts/SoDoSans-Regular.woff') format('woff');
   font-weight: 400; /* Peso da fonte (Regular) */
   font-style: normal;
   font-display: swap; /* Importante para o carregamento da fonte */
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'FonteSemiBold'; /* Nome que você usará no Tailwind */
-  src: url('/public/fonts/SoDoSans-SemiBold.woff2') format('woff2'), /* Caminho relativo à pasta public */
-       url('/public/fonts/SoDoSans-SemiBold.woff') format('woff');
+  src: url('/src/assets/fonts/SoDoSans-SemiBold.woff') format('woff2'), /* Caminho relativo à pasta public */
+       url('/src/assets/fonts/SoDoSans-SemiBold.woff') format('woff');
   font-weight: 600; /* Peso da fonte (SemiBold) */
   font-style: normal;
   font-display: swap; /* Importante para o carregamento da fonte */
@@ -22,8 +22,8 @@
 /* Definição da fonte MinhaFonte-Bold */
 @font-face {
   font-family: 'FonteBold'; /* Usando o mesmo nome da família para diferentes pesos */
-  src: url('/public/fonts/SoDoSans-Bold.woff2') format('woff2'),
-       url('/public/fonts/SoDoSans-Bold.woff') format('woff');
+  src: url('/src/assets/fonts/SoDoSans-Bold.woff2') format('woff2'),
+       url('/src/assets/fonts/SoDoSans-Bold.woff') format('woff');
   font-weight: 800; /* Peso da fonte (Bold) */
   font-style: normal;
   font-display: swap;
