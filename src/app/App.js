@@ -16,6 +16,8 @@ import Painel from "../pages/Painel";
 import Login from "../pages/Login"; 
 import Delivery from "../pages/Delivery/Delivery.jsx"
 import Carrinho from "../components/Carrinho/CarrinhodeCompras.js";
+import Produto from "../pages/Produto/Produto.jsx"
+
 
 
 //AUTENTICAÇÂO
@@ -72,6 +74,7 @@ function App() {
           />
           <main>
             <Routes>
+
                 {/* ROTAS */}
                 <Route path="/" element={<Home/>}/>
                 <Route path="/sobre" element={<Sobre/>}/>
@@ -79,6 +82,7 @@ function App() {
                 <Route path="/contato" element={<Contato/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/delivery" element={ <Delivery onAdicionarAoCarrinho={handleAdicionarAoCarrinho} /> }/>
+                <Route path="/produto" element={<Produto/>}/>
 
 
                 {/* ACESSO PRIVADO AO PAINEL */}
