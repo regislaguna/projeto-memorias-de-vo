@@ -2,81 +2,80 @@ import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { isAuthenticated, logout } from "../../utils/storage";
 
+const IconeCarrinho = ({ contagem }) => (
+    <div className="relative cursor-pointer transform hover:scale-110 transition-transform">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#634234]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      {contagem > 0 && (
+        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+          {contagem}
+        </span>
+      )}
+    </div>
+);
 
-const Header = () => {
-      // Hooks devem ser chamados no topo do componente
+
+const Header = ({ carrinhoItens = [], onAbrirCarrinho }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation(); // <-- CORREÇÃO 1: Mover o useLocation para cá
-
-    // A variável agora é declarada no escopo correto
-    const ehPaginaInicial = location.pathname === "/"; // <-- CORREÇÃO 2: Declarar a variável aqui
+    const location = useLocation();
+    const ehPaginaInicial = location.pathname === "/";
+    const contagemItensCarrinho = carrinhoItens.reduce((total, item) => total + item.quantidade, 0);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
     
     return(
-        <header className="relative w-full">
-          <div className="h-[100px] w-full flex items-center">
-          <div className="flex ml-60 justify-center items-center gap-4">
-            <img src={process.env.PUBLIC_URL + 'img/logovo.png'} className="w-[75px] h-[75px] rounded-full"/>
-            <h1 className="flex text-2xl uppercase font-sofia text-[#634234] font-fontsemibold">Memórias de Vó</h1>
-          </div>
-          <nav className=" ml-40 h-full flex-1 flex justify-center">
-            <ul className="flex h-full items-center gap-[10px]">
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Sobre">Sobre</Link></li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/produto">Produtos</Link></li>
-              <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
-            </ul>
-
-          </nav>
-          <div className="flex flex-1 items-center justify-end w-40 h-[100px] gap-[10px] z-10 mr-10">
-            <p><Link className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300" to="/login">Login</Link></p>
-            <p><Link className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300" to="/delivery">Delivery</Link></p>
+        <header className="relative w-full h-[100px]"> {/* Definimos uma altura fixa no container principal */}
+          {/* Container para Logo e Navegação (fluxo normal) */}
+          <div className="h-full w-full flex items-center">
+            <div className="flex ml-60 justify-center items-center gap-4">
+                <img src={process.env.PUBLIC_URL + 'img/logovo.png'} className="w-[75px] h-[75px] rounded-full" alt="Logo Memórias de Vó"/>
+                <h1 className="flex text-2xl uppercase font-sofia text-[#634234] font-fontsemibold">Memórias de Vó</h1>
+            </div>
+            <nav className=" ml-0 h-full flex-1 flex justify-center">
+                <ul className="flex h-full items-center gap-[10px]">
+                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/">Início</Link></li>
+                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Sobre">Sobre</Link></li>
+                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/delivery">Delivery</Link></li>
+                  <li className="p-2 font-extrabold text-xl text-[#634234] uppercase tracking-wide hover:text-[#da5089] cursor-pointer"><Link to="/Contato">Contatos</Link></li>
+                </ul>
+            </nav>
           </div>
 
-              {/* Esta é a condição que mostra/esconde o banner */}
-                {ehPaginaInicial && (
-          <div className="absolute h-[180px] w-[650px] flex right-0 z-0">
-            <Link to="/" >
-            <img className="h-[900px] w-[1100px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'}/>
-            </Link>
-          </div>
-                )}
+          {/* ======================= ÁREA DE POSICIONAMENTO CORRIGIDA ======================= */}
+          {/* Esta div agora é posicionada de forma absoluta sobre os outros elementos */}
+          <div className="absolute top-0 right-0 h-[100px] flex items-center gap-3 z-20 mr-10">
+            
+              {/* Ícone-botão para abrir o modal */}
+              <button 
+                onClick={onAbrirCarrinho} 
+                className="bg-transparent border-none"
+              >
+                  <IconeCarrinho contagem={contagemItensCarrinho} />
+              </button>
 
-          { isAuthenticated () &&
-                  <div className="flex justify-center items-center">
-                    <button className="bg-color-primary text-white font-bold p-3 rounded-[8px]" onClick={() => {logout(); navigate('/login')}}>Logout</button>
-                  </div>
-                }
-            {/* menu lateral mobile */}
-            <div
-        className={`w-[33%] h-screen absolute top-0 left-0 bg-white opacity-90 flex flex-col justify-center items-center space-y-6 md:hidden ${
-          isMenuOpen ? 'block' : 'hidden'
-        }`}
-      >
-        <button
-          className="absolute top-0 right-0 m-8 focus:outline-none" onClick={toggleMenu}
-         >
-          <svg
-            className="h-6 w-6 fill-current text-gray-700"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-          </svg>
-        </button>
-        <ul className="space-y-6 text-xl text-dark-gray-primary font-raleway">
-          <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Quemsomos">Quem somos</Link></li>
-          <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Solucoes">Soluções</Link></li>
-          <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Contato">Contato</Link></li>
-          <li className="border-b-4 border-gray-70 hover:border-color-third"><Link to="/Suporte">Suporte</Link></li>
-        </ul>
-      </div>
-      </div>
-    </header>
+              {/* Link de texto com estilo sutil e moderno */}
+              <Link 
+                to="/delivery" 
+                className="p-2 text-lg uppercase tracking-wide font-bold text-[#634234] border-2 border-[#8c4b3d] rounded-xl hover:bg-[#8c4b3d] hover:text-white transition-colors duration-300"
+              >
+                  Delivery
+              </Link>
+          </div>
+          {/* ============================================================================== */}
+
+          {/* O banner continua posicionado de forma absoluta, mas com z-index menor */}
+          {ehPaginaInicial && (
+            <div className="absolute h-[180px] w-[650px] flex right-0 top-0 z-0">
+              <Link to="/" >
+                <img className="h-[900px] w-[1100px]" src={process.env.PUBLIC_URL + 'img/bannerteste.png'} alt="Banner"/>
+              </Link>
+            </div>
+          )}
+        </header>
     )
 }
 
